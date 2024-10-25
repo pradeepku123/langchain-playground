@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage
 from langchain_groq import ChatGroq
+from langchain_core.messages import AIMessage
 
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 # Load environment variables from a .env file
@@ -18,6 +19,7 @@ print("GROQ_API_KEY Key is set to", os.environ["GROQ_API_KEY"])
 
 model = ChatGroq(model="llama3-8b-8192")
 
-print(model.invoke([HumanMessage(content="Who are you")]).content)
+print(model.invoke([HumanMessage(content="i am pradeep")]).content)
 
-from langchain_core.messages import AIMessage
+
+
